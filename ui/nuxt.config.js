@@ -30,7 +30,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~/plugins/matic.client', mode: 'client' }],
+  plugins: [{ src: '~/plugins/web3.client', mode: 'client' }],
   /*
    ** Nuxt.js dev-modules
    */
