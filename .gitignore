@@ -44,6 +44,9 @@ typings/
 # Optional npm cache directory
 .npm
 
+# Now config
+.now
+
 # Optional eslint cache
 .eslintcache
 
