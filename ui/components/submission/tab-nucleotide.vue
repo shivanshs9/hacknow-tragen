@@ -43,13 +43,11 @@ Keep it empty if you want to release Immediately After Processing."
           ></v-select>
         </v-col>
       </v-row>
-      <v-alert
-        border="top"
-        colored-border
-        type="info"
-        elevation="2"
-      >
-        FASTA sequences (not an alignment, most common data format) - <a href="https://www.ncbi.nlm.nih.gov/WebSub/html/help/fasta.html">HELP</a>
+      <v-alert border="top" colored-border type="info" elevation="2">
+        FASTA sequences (not an alignment, most common data format) -
+        <a href="https://www.ncbi.nlm.nih.gov/WebSub/html/help/fasta.html"
+          >HELP</a
+        >
         <pre>
   For example:
   >Seq1 [organism=genus species] Definition Line for Seq1
@@ -57,12 +55,16 @@ Keep it empty if you want to release Immediately After Processing."
   >Seq2 [organism=genus species] Definition Line for Seq2
   atctgaatagagattattt.... 
         </pre>
-        <a href="https://www.ncbi.nlm.nih.gov/WebSub/html/help/defline.html">Definition Lines</a> which are used to describe each sequence, should be included with your sequence data.
+        <a href="https://www.ncbi.nlm.nih.gov/WebSub/html/help/defline.html"
+          >Definition Lines</a
+        >
+        which are used to describe each sequence, should be included with your
+        sequence data.
       </v-alert>
       <v-row>
         <v-col cols="12">
-          <v-file-input 
-            accept="text/*" 
+          <v-file-input
+            accept="text/*"
             label="Upload Sequence(s) Data"
             @change="update('fastaFile', $event)"
           ></v-file-input>
@@ -78,8 +80,12 @@ export default Vue.extend({
   props: ['value'],
   data() {
     return {
+      valid: false,
       dateRules: [
-        v => !v || (/\d\d-\w\w\w-\d\d\d\d/.test(v) || 'Date must be valid - Date format is \'DD-Mon-YYYY\' (example: 20-Feb-2004).'),
+        (v) =>
+          !v ||
+          /\d\d-\w\w\w-\d\d\d\d/.test(v) ||
+          "Date must be valid - Date format is 'DD-Mon-YYYY' (example: 20-Feb-2004)."
       ],
       choiceMoleculeType: [
         'Genomic DNA',
@@ -93,10 +99,7 @@ export default Vue.extend({
         'Other Genetic: RNA',
         'Other Genetic: DNA'
       ],
-      choiceTopology: [
-        'Linear',
-        'Circular'
-      ]
+      choiceTopology: ['Linear', 'Circular']
     }
   },
   methods: {
