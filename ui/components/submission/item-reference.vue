@@ -8,7 +8,7 @@
         >
           <v-text-field
             :value="value.title"
-            :counter="10"
+            :counter="64"
             label="Reference Title"
             @input="update('title', $event)"
             required
@@ -19,14 +19,14 @@
           cols="12"
           md="6"
         >
-          <v-text-field
-            :value="value.lastName"
-            :rules="nameRules"
-            :counter="10"
-            label="Last name"
-            @input="update('lastName', $event)"
+          <v-select
+            :value="value.status"
+            :items="choiceStatus"
+            label="Publication Status"
+            @change="update('status', $event)"
+            type="outline"
             required
-          ></v-text-field>
+          ></v-select>
         </v-col>
       </v-row>
     </v-container>
@@ -42,6 +42,11 @@ export default Vue.extend({
   data() {
     return {
       valid: false,
+      choiceStatus: [
+        'unpublished',
+        'in-press',
+        'published'
+      ]
     }
   },
   methods: {

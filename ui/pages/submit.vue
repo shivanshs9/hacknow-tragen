@@ -54,7 +54,29 @@ export default Vue.extend({
                 firstName: '',
                 lastName: ''
               }
+            ],
+            references: [
+              {
+                title: '',
+                status: null
+              }
             ]
+          }
+        },
+        {
+          title: 'Sequencing Technology',
+          component: () => import('~/components/submission/tab-sequencing.vue'),
+          data: {
+            sequencingTech: []
+          }
+        },
+        {
+          title: 'Nucleotide',
+          component: () => import('~/components/submission/tab-nucleotide.vue'),
+          data: {
+            releaseDate: null,
+            moleculeType: null,
+            topology: null
           }
         }
       ]
