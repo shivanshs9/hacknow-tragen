@@ -64,6 +64,24 @@ export default Vue.extend({
     currentTab(newVal, oldVal) {
       console.log(this.$data.tabs)
     }
+  },
+  methods: {
+
+    uploadFile(fileObj, fileName){
+      var fileRef = this.$fireStorageObj().ref().child(fileName);
+      fileRef.put(fileObj).then(function(snapshot){
+        console.log("File uploaded successfully");
+      });
+      return fileRef.fullPath;
+    },
+
+    addToDB(transactionObj) {
+      transactionObj.verified=false;
+      var transactionsRef = this.$fireDbObj().ref('transactions/');
+      var newTransactionRef = transactionsRef.push();
+      newTransactionRef.set(transactionObj);
+      return newTransactionRef.key;
+    }
   }
 })
 </script>

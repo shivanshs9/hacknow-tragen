@@ -48,13 +48,36 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/firebase',
+    
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  firebase: {
+    config: {
+      // REQUIRED: Official config for firebase.initializeApp(config):
+      apiKey: 'AIzaSyChOCMkIbsNf8Solp-h-kJsgYjgC7RLZ3E',
+      authDomain: 'hacknow-tragen.firebaseapp.com',
+      databaseURL: 'https://hacknow-tragen.firebaseio.com',
+      projectId: 'hacknow-tragen',
+      storageBucket: 'hacknow-tragen.appspot.com',
+      messagingSenderId: '893961317217',
+      appId: '1:893961317217:web:cc9712a1e9d63469753320'
+      // measurementId: '<measurementId>',
+      // OPTIONAL: Additional config for other services:
+      // fcmPublicVapidKey: '<publicVapidKey>'/ // Sets vapid key for FCM after initialization
+    },
+    services:{
+      realtimeDB:true,
+      storage:true
+    },
+    realtimeDB:true,
+    storage:true
+  },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module

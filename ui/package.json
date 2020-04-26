@@ -14,7 +14,9 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/firebase": "^5.0.7",
     "@nuxtjs/pwa": "^3.0.0-0",
+    "firebase": "^7.14.2",
     "nuxt": "^2.0.0",
     "web3": "^1.2.7"
   },
