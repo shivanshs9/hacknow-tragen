@@ -1,7 +1,7 @@
 # Tragen
 **Tra**nsparent **Gen**omics
 
-Global collaboration research platform for transparent genomics data sharing
+Blockchain based global collaboration research platform for transparent genomics data sharing
 
 Submission for [HACK: Now hackathon](https://hacknow.calhacks.io/) 
 
@@ -11,7 +11,7 @@ Submission for [HACK: Now hackathon](https://hacknow.calhacks.io/)
 
 _The primary concern of researchers is data privacy, data security and data provenance._
 
-With Tragen, we aim to change power dynamics from the centralised, private institution to the open culture of researchers community via a distributed network. 
+With Tragen, we aim to change power dynamics from the centralised, private institution to the open culture of researchers community via a **distributed network.** 
 
 By providing a simple, user-friendly open platform, purpose-built for Genomic Sequence research collaboration that establishes the provenance of research outputs, and accelerates sharing, developing vaccines/medicines and citation recognition for contributions to the scholarly record. And put the rights over their own data in the hand of researchers.
 
