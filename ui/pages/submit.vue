@@ -107,33 +107,43 @@ export default Vue.extend({
   methods: {
     async submit() {
       this.loading = true
-      // if (!this.tabs[0].data.valid) console.error('Fill Contact Info')
-      // else if (!this.tabs[2].data.valid)
-      //   console.error('Fill Sequencing Technology Info')
-      // else if (!this.tabs[3].data.valid) console.error('Fill Nucleotide Info')
-      // else {
+      if (!this.tabs[0].data.valid) console.error('Fill Contact Info')
+      else if (!this.tabs[2].data.valid)
+        console.error('Fill Sequencing Technology Info')
+      else if (!this.tabs[3].data.valid) console.error('Fill Nucleotide Info')
+      else {
         const metadata = {
           ...this.tabs[0].data,
           ...this.tabs[1].data,
           ...this.tabs[2].data,
           ...this.tabs[3].data,
           ...this.tabs[4].data
-        };
-        const { visibility, fastaFile, modifierTableFile } = metadata;
-        ['valid', 'visibility', 'fastaFile', 'modifierTableFile'].forEach((e) => delete metadata[e])
-        let fastaUrl, modifierUrl;
-        if (!!fastaFile) fastaUrl = await this.uploadFile(fastaFile, fastaFile.name)
-        if (!!modifierTableFile) modifierUrl = await this.uploadFile(modifierTableFile, modifierTableFile.name)
-        
+        }
+        const { visibility, fastaFile, modifierTableFile } = metadata
+        ;['valid', 'visibility', 'fastaFile', 'modifierTableFile'].forEach(
+          (e) => delete metadata[e]
+        )
+        let fastaUrl, modifierUrl
+        if (!!fastaFile)
+          fastaUrl = await this.uploadFile(fastaFile, fastaFile.name)
+        if (!!modifierTableFile)
+          modifierUrl = await this.uploadFile(
+            modifierTableFile,
+            modifierTableFile.name
+          )
+
         const txnMetadata = await this.createSequenceMetadata(metadata)
-        const txnSubmitted = await this.submitSequenceBlk(txnMetadata, process.env.ADDRESS_CONTRACT_ROLE_CONTROL)
+        const txnSubmitted = await this.submitSequenceBlk(
+          txnMetadata,
+          process.env.ADDRESS_CONTRACT_ROLE_CONTROL
+        )
         const dbRecord = {
           ...metadata,
           txnMetadata: txnMetadata._address,
           txnSubmitted: txnSubmitted._address
         }
         this.addToDB(dbRecord)
-      // }
+      }
       this.loading = false
     },
     async uploadFile(fileObj, fileName) {
@@ -159,7 +169,7 @@ export default Vue.extend({
       const contract = this.$web3.contractSequenceMetadata
       try {
         return await newContractTxn(contract, [`0x${hash}`])
-      } catch(error) {
+      } catch (error) {
         console.log(`Failed sending deploying sequence metadata`)
         console.error(error)
       }
@@ -167,8 +177,11 @@ export default Vue.extend({
     async submitSequenceBlk(metadataTxn, roleControlAdd) {
       const contract = this.$web3.contractSubmittedSequence
       try {
-        return await newContractTxn(contract, [ metadataTxn._address, roleControlAdd ])
-      } catch(error) {
+        return await newContractTxn(contract, [
+          metadataTxn._address,
+          roleControlAdd
+        ])
+      } catch (error) {
         console.log(`Failed sending submitting sequence!`)
         console.error(error)
       }

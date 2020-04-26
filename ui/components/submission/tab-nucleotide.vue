@@ -63,6 +63,7 @@ Keep it empty if you want to release Immediately After Processing."
             accept="text/*"
             label="Upload Sequence(s) Data"
             @change="update('fastaFile', $event)"
+            required
           ></v-file-input>
         </v-col>
       </v-row>
