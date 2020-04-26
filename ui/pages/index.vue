@@ -70,6 +70,10 @@ export default {
   components: {
     Logo,
     VuetifyLogo
+  },
+  mounted() {
+    console.log(this.$web3)
+    window.dapp=this.$web3
   }
 }
 </script>

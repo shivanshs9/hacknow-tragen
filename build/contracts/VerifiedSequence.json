@@ -1,0 +1,479 @@
+{
+  "contractName": "VerifiedSequence",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract SubmittedSequence",
+          "name": "submitted",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "sequence",
+      "outputs": [
+        {
+          "internalType": "contract SubmittedSequence",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract SubmittedSequence\",\"name\":\"submitted\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"sequence\",\"outputs\":[{\"internalType\":\"contract SubmittedSequence\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/shivanshs9/projects/hacknow-tragen/contracts/verified-submission.sol\":\"VerifiedSequence\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/shivanshs9/projects/hacknow-tragen/contracts/access.sol\":{\"keccak256\":\"0xb5927708e6cfd28c67055138a9a0047df3061bb22123f1daada445f03d0a64b4\",\"urls\":[\"bzz-raw://d858a77c42ed264aa03e9e94038d2c11589ded0f3bb0800f8399c65dba58bcf8\",\"dweb:/ipfs/QmcKYNfKvvp5hkXuVwp2C46XE7njyz7yqt4YGu3TA7i24u\"]},\"/home/shivanshs9/projects/hacknow-tragen/contracts/constant.sol\":{\"keccak256\":\"0x471728cfccc994204c5144c654b3f94406712984f0d2a85f91f423c0ccd69af0\",\"urls\":[\"bzz-raw://3b9f477aca45cd9ceab2a034355c50acc8ab432577c6e888a8d00954d94e2adc\",\"dweb:/ipfs/QmdwTzgHZPZyHNAJLHyRo3hUtSUYez2v11FM4WVXiXBCQs\"]},\"/home/shivanshs9/projects/hacknow-tragen/contracts/sequence.sol\":{\"keccak256\":\"0xa5437a23d83fa0fe235ad8b47919645178b1505f102e9aca5b0cd1cf60c325c9\",\"urls\":[\"bzz-raw://18ff39ec8ce779094bc8d9f291b5b167c03bdc23355a021b9c7c33c807967448\",\"dweb:/ipfs/QmNMd4tB3fB7nRKMKkBTQLitFqukmZYUAcGAZFEjcQYb33\"]},\"/home/shivanshs9/projects/hacknow-tragen/contracts/submission.sol\":{\"keccak256\":\"0x07725967da9bdb9c97dd76b8c3f5b11da78623840be9c883f177b257d6232936\",\"urls\":[\"bzz-raw://4b79160cb9061b9e7f81052a26a98d35b4491ee721c6ec4a5a5f8114daba3769\",\"dweb:/ipfs/QmdoNzbLY96WB2kGeS4mqeDAkNYAvaZmDFTFfryeHwwKq7\"]},\"/home/shivanshs9/projects/hacknow-tragen/contracts/verified-submission.sol\":{\"keccak256\":\"0x457a529da6bfd8ae6fb4ff8806b824bddc1a001a85e445f3786f8568b83490d2\",\"urls\":[\"bzz-raw://af3737b280fd458d7755d3a1e6744b768fe85c716f5b2a698e8b3adf00d5317a\",\"dweb:/ipfs/QmRbVCLUemhgEzrkY2XkHKkRRaTckjECJTdzmUP5jAm6KW\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0x0de74dfa6b37943c1b834cbd8fb7a8d052e5ff80c7adb33692102dd6cd2985e9\",\"urls\":[\"bzz-raw://9d2d827fcf4a838f5821732c0acd6a40d21c2a5a2cfe2563feec91465f47bb60\",\"dweb:/ipfs/Qmex3wMKf5Sghbfvr288RUg1kP2uAyTMf11w83WbMbpQQc\"]},\"@openzeppelin/contracts/access/AccessControl.sol\":{\"keccak256\":\"0xb81ba108a4e07edf967dbd0c5a5e3078920d2375644b489eed27bd72eba1236f\",\"urls\":[\"bzz-raw://d17f3fcb641b39432a0d11d63f8283156f1a407ac0a1080b92d093901a26e71e\",\"dweb:/ipfs/QmZ7dGq785VmJEGw7JJtYc5gRNuogZ6VkhCdL1LF2eZpAZ\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0x5f7da58ee3d9faa9b8999a93d49c8ff978f1afc88ae9bcfc6f9cbb44da011c2b\",\"urls\":[\"bzz-raw://4f089d954b3ecaa26949412fe63e9a184b056562c6c13dd4a0529a5d9a2e685a\",\"dweb:/ipfs/QmVK5iCNAMcEJQxT59bsC5E53JQASDQPU6khHox3d5ZXCn\"]},\"@openzeppelin/contracts/utils/EnumerableSet.sol\":{\"keccak256\":\"0x7f6401708b61f575b497aa7c8118ca9d70348643c83c26e70d9b643edf1a95c1\",\"urls\":[\"bzz-raw://b020d65f592c1715bc3d5799ad835cd975ef7d314f340f27603fb99ad86a0427\",\"dweb:/ipfs/QmQoGZmzE5aDTMGJM4BW77eraerfTSV9Rs8wykpQ42i1in\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516101633803806101638339818101604052602081101561003357600080fd5b8101908080519060200190929190505050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505060d0806100936000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063529d15cc14602d575b600080fd5b60336075565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea264697066735822122008d072e328fd75ee9c7ad6099ba806bae9ac4c44534e89af6779462f37d9ed2d64736f6c63430006020033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063529d15cc14602d575b600080fd5b60336075565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea264697066735822122008d072e328fd75ee9c7ad6099ba806bae9ac4c44534e89af6779462f37d9ed2d64736f6c63430006020033",
+  "sourceMap": "103:159:5:-:0;;;175:85;8:9:-1;5:2;;;30:1;27;20:12;5:2;175:85:5;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;175:85:5;;;;;;;;;;;;;;;;244:9;233:8;;:20;;;;;;;;;;;;;;;;;;175:85;103:159;;;;;;",
+  "deployedSourceMap": "103:159:5:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;103:159:5;;;;;;;;;;;;;;;;;;;135:33;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity >=0.4.22;\n\nimport './sequence.sol';\nimport './access.sol';\nimport './submission.sol';\n\ncontract VerifiedSequence {\n    SubmittedSequence public sequence;\n\n    constructor(SubmittedSequence submitted) public {\n        sequence = submitted;\n    }\n}",
+  "sourcePath": "/home/shivanshs9/projects/hacknow-tragen/contracts/verified-submission.sol",
+  "ast": {
+    "absolutePath": "/home/shivanshs9/projects/hacknow-tragen/contracts/verified-submission.sol",
+    "exportedSymbols": {
+      "VerifiedSequence": [
+        263
+      ]
+    },
+    "id": 264,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 247,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:25:5"
+      },
+      {
+        "absolutePath": "/home/shivanshs9/projects/hacknow-tragen/contracts/sequence.sol",
+        "file": "./sequence.sol",
+        "id": 248,
+        "nodeType": "ImportDirective",
+        "scope": 264,
+        "sourceUnit": 128,
+        "src": "27:24:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/shivanshs9/projects/hacknow-tragen/contracts/access.sol",
+        "file": "./access.sol",
+        "id": 249,
+        "nodeType": "ImportDirective",
+        "scope": 264,
+        "sourceUnit": 105,
+        "src": "52:22:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/shivanshs9/projects/hacknow-tragen/contracts/submission.sol",
+        "file": "./submission.sol",
+        "id": 250,
+        "nodeType": "ImportDirective",
+        "scope": 264,
+        "sourceUnit": 246,
+        "src": "75:26:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 263,
+        "linearizedBaseContracts": [
+          263
+        ],
+        "name": "VerifiedSequence",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "529d15cc",
+            "id": 252,
+            "name": "sequence",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 263,
+            "src": "135:33:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_SubmittedSequence_$245",
+              "typeString": "contract SubmittedSequence"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 251,
+              "name": "SubmittedSequence",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 245,
+              "src": "135:17:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SubmittedSequence_$245",
+                "typeString": "contract SubmittedSequence"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 261,
+              "nodeType": "Block",
+              "src": "223:37:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 259,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 257,
+                      "name": "sequence",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 252,
+                      "src": "233:8:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_SubmittedSequence_$245",
+                        "typeString": "contract SubmittedSequence"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 258,
+                      "name": "submitted",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 254,
+                      "src": "244:9:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_SubmittedSequence_$245",
+                        "typeString": "contract SubmittedSequence"
+                      }
+                    },
+                    "src": "233:20:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_SubmittedSequence_$245",
+                      "typeString": "contract SubmittedSequence"
+                    }
+                  },
+                  "id": 260,
+                  "nodeType": "ExpressionStatement",
+                  "src": "233:20:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 262,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 255,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 254,
+                  "name": "submitted",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 262,
+                  "src": "187:27:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_SubmittedSequence_$245",
+                    "typeString": "contract SubmittedSequence"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 253,
+                    "name": "SubmittedSequence",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 245,
+                    "src": "187:17:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_SubmittedSequence_$245",
+                      "typeString": "contract SubmittedSequence"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "186:29:5"
+            },
+            "returnParameters": {
+              "id": 256,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "223:0:5"
+            },
+            "scope": 263,
+            "src": "175:85:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 264,
+        "src": "103:159:5"
+      }
+    ],
+    "src": "0:262:5"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/shivanshs9/projects/hacknow-tragen/contracts/verified-submission.sol",
+    "exportedSymbols": {
+      "VerifiedSequence": [
+        263
+      ]
+    },
+    "id": 264,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 247,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:25:5"
+      },
+      {
+        "absolutePath": "/home/shivanshs9/projects/hacknow-tragen/contracts/sequence.sol",
+        "file": "./sequence.sol",
+        "id": 248,
+        "nodeType": "ImportDirective",
+        "scope": 264,
+        "sourceUnit": 128,
+        "src": "27:24:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/shivanshs9/projects/hacknow-tragen/contracts/access.sol",
+        "file": "./access.sol",
+        "id": 249,
+        "nodeType": "ImportDirective",
+        "scope": 264,
+        "sourceUnit": 105,
+        "src": "52:22:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/shivanshs9/projects/hacknow-tragen/contracts/submission.sol",
+        "file": "./submission.sol",
+        "id": 250,
+        "nodeType": "ImportDirective",
+        "scope": 264,
+        "sourceUnit": 246,
+        "src": "75:26:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 263,
+        "linearizedBaseContracts": [
+          263
+        ],
+        "name": "VerifiedSequence",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "529d15cc",
+            "id": 252,
+            "name": "sequence",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 263,
+            "src": "135:33:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_SubmittedSequence_$245",
+              "typeString": "contract SubmittedSequence"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 251,
+              "name": "SubmittedSequence",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 245,
+              "src": "135:17:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_SubmittedSequence_$245",
+                "typeString": "contract SubmittedSequence"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 261,
+              "nodeType": "Block",
+              "src": "223:37:5",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 259,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 257,
+                      "name": "sequence",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 252,
+                      "src": "233:8:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_SubmittedSequence_$245",
+                        "typeString": "contract SubmittedSequence"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 258,
+                      "name": "submitted",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 254,
+                      "src": "244:9:5",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_SubmittedSequence_$245",
+                        "typeString": "contract SubmittedSequence"
+                      }
+                    },
+                    "src": "233:20:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_SubmittedSequence_$245",
+                      "typeString": "contract SubmittedSequence"
+                    }
+                  },
+                  "id": 260,
+                  "nodeType": "ExpressionStatement",
+                  "src": "233:20:5"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 262,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 255,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 254,
+                  "name": "submitted",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 262,
+                  "src": "187:27:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_SubmittedSequence_$245",
+                    "typeString": "contract SubmittedSequence"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 253,
+                    "name": "SubmittedSequence",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 245,
+                    "src": "187:17:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_SubmittedSequence_$245",
+                      "typeString": "contract SubmittedSequence"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "186:29:5"
+            },
+            "returnParameters": {
+              "id": 256,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "223:0:5"
+            },
+            "scope": 263,
+            "src": "175:85:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 264,
+        "src": "103:159:5"
+      }
+    ],
+    "src": "0:262:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.2+commit.bacdbe57.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2020-04-26T06:48:07.074Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,0 +1,286 @@
+{
+  "contractName": "Constant",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "ROLE_AUTHORITY",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"ROLE_AUTHORITY\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/shivanshs9/projects/hacknow-tragen/contracts/constant.sol\":\"Constant\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/shivanshs9/projects/hacknow-tragen/contracts/constant.sol\":{\"keccak256\":\"0x471728cfccc994204c5144c654b3f94406712984f0d2a85f91f423c0ccd69af0\",\"urls\":[\"bzz-raw://3b9f477aca45cd9ceab2a034355c50acc8ab432577c6e888a8d00954d94e2adc\",\"dweb:/ipfs/QmdwTzgHZPZyHNAJLHyRo3hUtSUYez2v11FM4WVXiXBCQs\"]}},\"version\":1}",
+  "bytecode": "0x60c3610024600b82828239805160001a607314601757fe5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361060335760003560e01c80632b93962c146038575b600080fd5b603e6054565b6040518082815260200191505060405180910390f35b60405180807f726f6c652e617574686f72697479000000000000000000000000000000000000815250600e01905060405180910390208156fea2646970667358221220c45937c97a1834a0c9f389506766d38225a0e991fff91c2a4b73c344b09040a164736f6c63430006020033",
+  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040526004361060335760003560e01c80632b93962c146038575b600080fd5b603e6054565b6040518082815260200191505060405180910390f35b60405180807f726f6c652e617574686f72697479000000000000000000000000000000000000815250600e01905060405180910390208156fea2646970667358221220c45937c97a1834a0c9f389506766d38225a0e991fff91c2a4b73c344b09040a164736f6c63430006020033",
+  "sourceMap": "27:94:2:-:0;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
+  "deployedSourceMap": "27:94:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;50:68;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;91:27;;;;;;;;;;;;;;;;;;;50:68;:::o",
+  "source": "pragma solidity >=0.4.22;\n\nlibrary Constant {\n    bytes32 public constant ROLE_AUTHORITY = keccak256(\"role.authority\");\n}",
+  "sourcePath": "/home/shivanshs9/projects/hacknow-tragen/contracts/constant.sol",
+  "ast": {
+    "absolutePath": "/home/shivanshs9/projects/hacknow-tragen/contracts/constant.sol",
+    "exportedSymbols": {
+      "Constant": [
+        112
+      ]
+    },
+    "id": 113,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 106,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:25:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 112,
+        "linearizedBaseContracts": [
+          112
+        ],
+        "name": "Constant",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "functionSelector": "2b93962c",
+            "id": 111,
+            "name": "ROLE_AUTHORITY",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 112,
+            "src": "50:68:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 107,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "50:7:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "726f6c652e617574686f72697479",
+                  "id": 109,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "101:16:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_a99fd6e080a7f46960493f2238eedf84810cbb8c70dee783703168d6bbce0b9b",
+                    "typeString": "literal_string \"role.authority\""
+                  },
+                  "value": "role.authority"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_a99fd6e080a7f46960493f2238eedf84810cbb8c70dee783703168d6bbce0b9b",
+                    "typeString": "literal_string \"role.authority\""
+                  }
+                ],
+                "id": 108,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": -8,
+                "src": "91:9:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 110,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "91:27:2",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 113,
+        "src": "27:94:2"
+      }
+    ],
+    "src": "0:121:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/shivanshs9/projects/hacknow-tragen/contracts/constant.sol",
+    "exportedSymbols": {
+      "Constant": [
+        112
+      ]
+    },
+    "id": 113,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 106,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:25:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 112,
+        "linearizedBaseContracts": [
+          112
+        ],
+        "name": "Constant",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "functionSelector": "2b93962c",
+            "id": 111,
+            "name": "ROLE_AUTHORITY",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 112,
+            "src": "50:68:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 107,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "50:7:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "726f6c652e617574686f72697479",
+                  "id": 109,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "101:16:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_a99fd6e080a7f46960493f2238eedf84810cbb8c70dee783703168d6bbce0b9b",
+                    "typeString": "literal_string \"role.authority\""
+                  },
+                  "value": "role.authority"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_a99fd6e080a7f46960493f2238eedf84810cbb8c70dee783703168d6bbce0b9b",
+                    "typeString": "literal_string \"role.authority\""
+                  }
+                ],
+                "id": 108,
+                "name": "keccak256",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": -8,
+                "src": "91:9:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                  "typeString": "function (bytes memory) pure returns (bytes32)"
+                }
+              },
+              "id": 110,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "functionCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "91:27:2",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 113,
+        "src": "27:94:2"
+      }
+    ],
+    "src": "0:121:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.2+commit.bacdbe57.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2020-04-26T06:46:45.132Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
