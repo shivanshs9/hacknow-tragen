@@ -1,9 +1,7 @@
 <template>
   <v-form v-model="valid">
     <v-container>
-      <v-card-title class="headline">
-        Submission Release Date
-      </v-card-title>
+      <v-card-title class="headline">Submission Release Date</v-card-title>
       <v-row>
         <v-col cols="12">
           <v-text-field
@@ -17,9 +15,7 @@ Keep it empty if you want to release Immediately After Processing."
           ></v-text-field>
         </v-col>
       </v-row>
-      <v-card-title class="headline">
-        Sequence(s)
-      </v-card-title>
+      <v-card-title class="headline">Sequence(s)</v-card-title>
       <v-row>
         <v-col cols="12" md="6">
           <v-select
@@ -45,9 +41,9 @@ Keep it empty if you want to release Immediately After Processing."
       </v-row>
       <v-alert border="top" colored-border type="info" elevation="2">
         FASTA sequences (not an alignment, most common data format) -
-        <a href="https://www.ncbi.nlm.nih.gov/WebSub/html/help/fasta.html"
-          >HELP</a
-        >
+        <a
+          href="https://www.ncbi.nlm.nih.gov/WebSub/html/help/fasta.html"
+        >HELP</a>
         <pre>
   For example:
   >Seq1 [organism=genus species] Definition Line for Seq1
@@ -55,9 +51,7 @@ Keep it empty if you want to release Immediately After Processing."
   >Seq2 [organism=genus species] Definition Line for Seq2
   atctgaatagagattattt.... 
         </pre>
-        <a href="https://www.ncbi.nlm.nih.gov/WebSub/html/help/defline.html"
-          >Definition Lines</a
-        >
+        <a href="https://www.ncbi.nlm.nih.gov/WebSub/html/help/defline.html">Definition Lines</a>
         which are used to describe each sequence, should be included with your
         sequence data.
       </v-alert>
@@ -74,7 +68,7 @@ Keep it empty if you want to release Immediately After Processing."
   </v-form>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
 export default Vue.extend({
   props: ['value'],

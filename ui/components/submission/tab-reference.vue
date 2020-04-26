@@ -1,27 +1,25 @@
 <template>
   <v-container>
     <template>
-      <v-card-title class="headline">
-        Sequence Authors
-      </v-card-title>
+      <v-card-title class="headline">Sequence Authors</v-card-title>
       <ItemAuthor
         v-for="(author, i) in value.authors"
         :key="`aut-${i}`"
         :value="author"
-        @input="editAuthor(i, $event)" />
+        @input="editAuthor(i, $event)"
+      />
       <v-btn class="mx-2" fab dark color="indigo" @click="addAuthor">
         <v-icon dark>mdi-plus</v-icon>
       </v-btn>
     </template>
     <template>
-      <v-card-title class="headline">
-        Publication Status
-      </v-card-title>
+      <v-card-title class="headline">Publication Status</v-card-title>
       <ItemReference
         v-for="(reference, i) in value.references"
         :key="`ref-${i}`"
         :value="reference"
-        @input="editReference(i, $event)" />
+        @input="editReference(i, $event)"
+      />
       <v-btn class="mx-2" fab dark color="indigo" @click="addReference">
         <v-icon dark>mdi-plus</v-icon>
       </v-btn>
@@ -29,7 +27,7 @@
   </v-container>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
 import ItemAuthor from './item-author'
 import ItemReference from './item-reference'
@@ -39,9 +37,7 @@ export default Vue.extend({
     ItemAuthor,
     ItemReference
   },
-  props: [
-    'value'
-  ],
+  props: ['value'],
   data() {
     return {
       valid: false
@@ -75,6 +71,4 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="stylus" scoped>
-
-</style>
+<style lang="stylus" scoped></style>

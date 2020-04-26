@@ -2,10 +2,7 @@
   <v-form v-model="valid">
     <v-container>
       <v-row>
-        <v-col
-          cols="12"
-          md="6"
-        >
+        <v-col cols="12" md="6">
           <v-text-field
             :value="value.title"
             :counter="64"
@@ -15,10 +12,7 @@
           ></v-text-field>
         </v-col>
 
-        <v-col
-          cols="12"
-          md="6"
-        >
+        <v-col cols="12" md="6">
           <v-select
             :value="value.status"
             :items="choiceStatus"
@@ -33,20 +27,14 @@
   </v-form>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
 export default Vue.extend({
-  props: [
-    'value'
-  ],
+  props: ['value'],
   data() {
     return {
       valid: false,
-      choiceStatus: [
-        'unpublished',
-        'in-press',
-        'published'
-      ]
+      choiceStatus: ['unpublished', 'in-press', 'published']
     }
   },
   methods: {
@@ -57,6 +45,4 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="stylus" scoped>
-
-</style>
+<style lang="stylus" scoped></style>

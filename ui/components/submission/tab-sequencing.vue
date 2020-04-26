@@ -1,9 +1,7 @@
 <template>
   <v-form v-model="valid">
     <v-container>
-      <v-card-title class="headline">
-        Sequencing Technology
-      </v-card-title>
+      <v-card-title class="headline">Sequencing Technology</v-card-title>
       <v-row>
         <v-col cols="12">
           <v-combobox
@@ -18,14 +16,12 @@
           ></v-combobox>
         </v-col>
       </v-row>
-      <v-row>
-
-      </v-row>
+      <v-row></v-row>
     </v-container>
   </v-form>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
 export default Vue.extend({
   props: ['value'],

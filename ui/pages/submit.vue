@@ -3,9 +3,7 @@
     <div class="display-2">Submit Genomic data</div>
     <v-flex xs12 sm8 md6>
       <v-tabs v-model="currentTab">
-        <v-tab v-for="(tab, i) in tabs" :key="i" :href="`#tab-${i}`">
-          {{ tab.title }}
-        </v-tab>
+        <v-tab v-for="(tab, i) in tabs" :key="i" :href="`#tab-${i}`">{{ tab.title }}</v-tab>
       </v-tabs>
 
       <v-tabs-items v-model="currentTab">
@@ -18,14 +16,14 @@
         </v-tab-item>
       </v-tabs-items>
     </v-flex>
-    <v-btn :loading="loading" class="ma-2" color="primary" dark @click="submit"
-      >Submit
+    <v-btn :loading="loading" class="ma-2" color="primary" dark @click="submit">
+      Submit
       <v-icon dark right>mdi-checkbox-marked-circle</v-icon>
     </v-btn>
   </v-layout>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
 
 export default Vue.extend({
