@@ -1,5 +1,5 @@
 <template>
-  <v-form v-model="valid">
+  <v-form @input="update('valid', $event)">
     <v-container>
       <v-row>
         <v-col cols="12" md="4">
@@ -29,6 +29,7 @@
             :value="value.email"
             :rules="emailRules"
             label="E-mail"
+            type="email"
             @input="update('email', $event)"
             required
           ></v-text-field>
@@ -44,7 +45,6 @@ export default Vue.extend({
   props: ['value'],
   data() {
     return {
-      valid: false,
       emailRules: [
         (v) => !!v || 'E-mail is required',
         (v) => /.+@.+/.test(v) || 'E-mail must be valid'

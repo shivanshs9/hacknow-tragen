@@ -72,11 +72,9 @@ export default {
       // fcmPublicVapidKey: '<publicVapidKey>'/ // Sets vapid key for FCM after initialization
     },
     services:{
-      realtimeDB:true,
-      storage:true
-    },
-    realtimeDB:true,
-    storage:true
+      realtimeDb: true,
+      storage: true
+    }
   },
   /*
    ** vuetify module configuration

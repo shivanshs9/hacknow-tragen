@@ -1,6 +1,18 @@
 <template>
-  <v-form v-model="valid">
+  <v-form @input="update('valid', $event)">
     <v-container>
+      <v-card-title class="headline">Research Definition</v-card-title>
+      <v-row>
+        <v-col cols="12">
+          <v-text-field
+            :value="value.definition"
+            :counter="128"
+            label="Title"
+            @input="update('definition', $event)"
+            required
+          ></v-text-field>
+        </v-col>
+      </v-row>
       <v-card-title class="headline">Sequencing Technology</v-card-title>
       <v-row>
         <v-col cols="12">
@@ -27,7 +39,6 @@ export default Vue.extend({
   props: ['value'],
   data() {
     return {
-      valid: false,
       choiceSequencingTech: [
         'Sanger dideoxy sequencing',
         '454',
