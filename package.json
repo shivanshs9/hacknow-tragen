@@ -17,6 +17,7 @@
     "truffle": "^5.1.23"
   },
   "dependencies": {
+    "@nuxtjs/toast": "^3.3.0",
     "@openzeppelin/contracts": "^3.0.0",
     "@truffle/hdwallet-provider": "^1.0.17"
   }

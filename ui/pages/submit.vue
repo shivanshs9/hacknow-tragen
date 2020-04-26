@@ -107,10 +107,12 @@ export default Vue.extend({
   methods: {
     async submit() {
       this.loading = true
-      if (!this.tabs[0].data.valid) console.error('Fill Contact Info')
+      if (!this.tabs[0].data.valid)
+        this.$toast.error('Oops... Fill Contact Info')
       else if (!this.tabs[2].data.valid)
-        console.error('Fill Sequencing Technology Info')
-      else if (!this.tabs[3].data.valid) console.error('Fill Nucleotide Info')
+        this.$toast.error('Oops... Fill Sequencing Technology Info')
+      else if (!this.tabs[3].data.valid)
+        this.$toast.error('Oops... Fill Nucleotide Info')
       else {
         const metadata = {
           ...this.tabs[0].data,
@@ -142,6 +144,8 @@ export default Vue.extend({
           txnMetadata: txnMetadata._address,
           txnSubmitted: txnSubmitted._address
         }
+        if (!!fastaUrl) dbRecord.fastaUrl = fastaUrl
+        if (!!modifierUrl) dbRecord.modifierUrl = modifierUrl
         this.addToDB(dbRecord)
       }
       this.loading = false
@@ -182,6 +186,7 @@ export default Vue.extend({
           roleControlAdd
         ])
       } catch (error) {
+        this.$toast.error('Oops... ' + error)
         console.log(`Failed sending submitting sequence!`)
         console.error(error)
       }

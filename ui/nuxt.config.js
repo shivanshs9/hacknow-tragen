@@ -50,7 +50,7 @@ export default {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     '@nuxtjs/firebase',
-    
+    '@nuxtjs/toast'
   ],
   /*
    ** Axios module configuration
@@ -71,7 +71,7 @@ export default {
       // OPTIONAL: Additional config for other services:
       // fcmPublicVapidKey: '<publicVapidKey>'/ // Sets vapid key for FCM after initialization
     },
-    services:{
+    services: {
       realtimeDb: true,
       storage: true
     }
@@ -96,6 +96,19 @@ export default {
         }
       }
     }
+  },
+  toast: {
+    position: 'bottom-center',
+    register: [
+      // Register custom toasts
+      {
+        name: 'my_error',
+        message: 'Oops...Something went wrong',
+        options: {
+          type: 'error'
+        }
+      }
+    ]
   },
   /*
    ** Build configuration
