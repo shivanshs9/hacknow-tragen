@@ -76,7 +76,17 @@ export default Vue.extend({
           data: {
             releaseDate: null,
             moleculeType: null,
-            topology: null
+            topology: null,
+            fastaFile: null
+          }
+        },
+        {
+          title: 'Submission Category',
+          component: () => import('~/components/submission/tab-submission.vue'),
+          data: {
+            category: null,
+            visibility: 'Public',
+            modifierTableFile: null
           }
         }
       ]
@@ -99,7 +109,7 @@ export default Vue.extend({
 
     addToDB(transactionObj) {
       transactionObj.verified=false;
-      var transactionsRef = this.$fireDbObj().ref('transactions/');
+      var transactionsRef = this.$fireDbObj().ref('sequences/');
       var newTransactionRef = transactionsRef.push();
       newTransactionRef.set(transactionObj);
       return newTransactionRef.key;

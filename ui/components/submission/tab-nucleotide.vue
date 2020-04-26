@@ -61,7 +61,11 @@ Keep it empty if you want to release Immediately After Processing."
       </v-alert>
       <v-row>
         <v-col cols="12">
-          <v-file-input accept="text/*" label="Upload Sequence(s) Data"></v-file-input>
+          <v-file-input 
+            accept="text/*" 
+            label="Upload Sequence(s) Data"
+            @change="update('fastaFile', $event)"
+          ></v-file-input>
         </v-col>
       </v-row>
     </v-container>
